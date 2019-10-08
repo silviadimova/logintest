@@ -16,9 +16,7 @@ import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.isEnabled;
 import static androidx.test.espresso.matcher.ViewMatchers.withHint;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
-import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.not;
-import static org.junit.Assert.*;
 
 @RunWith(AndroidJUnit4.class)
 public class LoginActivityTest {
@@ -38,14 +36,21 @@ public class LoginActivityTest {
 
     @Test
     public void testSignInButtonEnabledIfCredentialsAreCorrect() {
-        onView(withId(R.id.username)).perform(typeText("silviata77@gmail.com"));
+        onView(withId(R.id.username)).perform(typeText("silviata3456@gmail.com"));
         onView(withId(R.id.password)).perform(typeText("765efvggh"));
         onView(withId(R.id.login)).check(matches(isEnabled()));
     }
 
     @Test
-    public void testSignInButtonNotEnabledIfPasswordNotCorrect() {
-        onView(withId(R.id.username)).perform(typeText("silviata77@gmail.com"));
+    public void testSignInButtonNotEnabledIfPasswordAndEmailAreNotCorrect() {
+        onView(withId(R.id.username)).perform(typeText(""));
+        onView(withId(R.id.password)).perform(typeText(""));
+        onView(withId(R.id.login)).check(matches(not(isEnabled())));
+    }
+
+    @Test
+    public void testSignInButtonIsNotEnabledIfPasswordNotCorrect() {
+        onView(withId(R.id.username)).perform(typeText("silviata3456@gmail.com"));
         onView(withId(R.id.password)).perform(typeText("765"));
         onView(withId(R.id.login)).check(matches(not(isEnabled())));
     }
