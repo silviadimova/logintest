@@ -9,27 +9,32 @@ public class Person {
     public String getName() {
         return name.toString();
     }
+
     public String getGender() {
         return gender;
     }
+
     public int getAge(){
         return age;
     }
+
     public void setName(String firstName, String lastName){
         PersonName newName = new PersonName();
         newName.setFirstName(firstName);
         newName.setLastName(lastName);
         name = newName;
     }
+
     public void setGender(String newGender){
         gender = newGender;
     }
+
     public void setAge(int newAge){
         age = newAge;
     }
 
     public void walk() {
-
+        //This shall have later an implementation
     }
 }
 
