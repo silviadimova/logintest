@@ -5,6 +5,8 @@ public class Person {
     private String gender;
     private int age;
     private int calories;
+    private String address;
+    private String country;
 
     public String getName() {
         return name.toString();
@@ -31,6 +33,22 @@ public class Person {
 
     public void setAge(int newAge){
         age = newAge;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
     }
 
     public void walk() {
