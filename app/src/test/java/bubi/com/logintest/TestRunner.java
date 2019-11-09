@@ -20,7 +20,7 @@ public class TestRunner {
     @Test
     public void runDetailsScreenTest(){
         detailsScreenTest.run();
-
+// hello comment
     }
 
     @Test
