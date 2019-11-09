@@ -25,7 +25,7 @@ public class PersonTest {
         personName.setLastName("Second Name");
         tested.setName(personName.getFirstName(), personName.getLastName());
         final String expected = "First Name, Second Name";
-        final String result = tested.getName();
+        final String result = tested.getAddress();
         assertEquals(expected, result);
     }
 }

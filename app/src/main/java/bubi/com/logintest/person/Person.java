@@ -8,9 +8,6 @@ public class Person {
     private String address;
     private String country;
 
-    public String getName() {
-        return name.toString();
-    }
 
     public String getGender() {
         return gender;
@@ -52,7 +49,15 @@ public class Person {
     }
 
     public void walk() {
-        //This shall have later an implementation
+        float numberOne = 10.1f;
+        float numberTwo = 10.2f;
+        int result = (int) (numberOne + numberTwo);
+    }
+    public void setAddress() {
+        String homeNumber = "15";
+        String streetName = "Nevinson";
+        PersonName silvia = new PersonName();
+        boolean isHomeNumberSameAsStreeName = homeNumber == streetName;
     }
 }
 
