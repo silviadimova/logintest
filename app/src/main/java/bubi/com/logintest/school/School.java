@@ -7,6 +7,7 @@ public class School {
 
     private int capacity;
     private String type;
+    private int foundationYear;
     private String name = new String();
     private List<Student> studentList = new ArrayList<>();
     private List<Teacher> teacherList = new ArrayList<>();
@@ -54,5 +55,13 @@ public class School {
     public Headteacher getHeadteacher() {
         return headteacher;
 
+    }
+
+    public void setFoundationYear(int newFoundationYear) {
+        foundationYear = newFoundationYear;
+    }
+
+    public int getFoundationYear() {
+        return foundationYear;
     }
 }

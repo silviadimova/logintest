@@ -40,13 +40,20 @@ public class MyProgramm {
         Headteacher headteacher;
         headteacher = new Headteacher();
         school.setHeadteacher(headteacher);
+        school.setFoundationYear(1988);
 
         addNewStudentIfNotEnough(school.getStudentNumber());
         addNewTeacherIfZero(school.getTeacherNumber());
         printHeadteacherNameIfExisting(school.getHeadteacher().getName());
 
+        printSchoolFoundationYear();
 
     }
+
+    private void printSchoolFoundationYear() {
+        System.out.println(school.getFoundationYear());
+    }
+
     public void addNewStudentIfNotEnough(int number){
         if(number<5){
             Student student;
