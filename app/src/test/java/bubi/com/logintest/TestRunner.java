@@ -12,20 +12,5 @@ public class TestRunner {
     private DetailsScreenTest detailsScreenTest = new DetailsScreenTest();
     private SomeOtherScreenTest someOtherScreenTest = new SomeOtherScreenTest();
 
-//    @Test
-//    public void runHomeScreenTest(){
-//        homeScreenTest.run();
-//    }
-//
-//    @Test
-//    public void runDetailsScreenTest(){
-//        detailsScreenTest.run();
-//// hello comment
-//    }
-//
-//    @Test
-//    public void runSomeOtherScreenTest(){
-//        someOtherScreenTest.run();
-//    }
 
 }
