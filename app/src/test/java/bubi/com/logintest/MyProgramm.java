@@ -40,7 +40,7 @@ public class MyProgramm {
         Headteacher headteacher;
         headteacher = new Headteacher();
         school.setHeadteacher(headteacher);
-        school.setFoundationYear(1980);
+        school.setFoundationYear(1990);
 
         addNewStudentIfNotEnough(school.getStudentNumber());
         addNewTeacherIfZero(school.getTeacherNumber());
