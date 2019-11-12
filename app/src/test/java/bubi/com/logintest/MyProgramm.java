@@ -41,14 +41,25 @@ public class MyProgramm {
         headteacher = new Headteacher();
         school.setHeadteacher(headteacher);
         school.setFoundationYear(1990);
+        school.setCapacity(150);
 
         addNewStudentIfNotEnough(school.getStudentNumber());
         addNewTeacherIfZero(school.getTeacherNumber());
         printHeadteacherNameIfExisting(school.getHeadteacher().getName());
-
         printSchoolFoundationYear();
+        printSchoolCapacity(school.getCapacity());
 
+    }public void printSchoolCapacity(int capacity){
+        if(capacity<150){
+            System.out.println("School is undersubscribed");
+        }
+        else{
+            System.out.println("School is oversubscribed");
+        }
     }
+
+
+
 
     private void printSchoolFoundationYear() {
         System.out.println(school.getFoundationYear());

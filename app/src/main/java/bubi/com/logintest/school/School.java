@@ -13,6 +13,10 @@ public class School {
     private List<Teacher> teacherList = new ArrayList<>();
     private Headteacher headteacher;
 
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
     public String getName (){
         return name;
     }
