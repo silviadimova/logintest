@@ -2,7 +2,10 @@ package bubi.com.logintest.screentests;
 
 public class MockBackend {
 
+    private String response;
+
     public void setupMockResponse(String response){
-       System.out.println(response+ " is setup");
+        this.response = response;
+       System.out.println(this.response+ " is setup");
     }
 }

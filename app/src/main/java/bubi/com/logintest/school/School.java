@@ -23,8 +23,8 @@ public class School {
     public int getCapacity(){
         return capacity;
     }
-    public void setName(String newName) {
-        name = newName;
+    public void setName(String name) {
+        this.name = name;
 
     }
     public void addStudent(Student newStudent){

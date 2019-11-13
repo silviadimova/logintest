@@ -11,6 +11,7 @@ public class HomeScreenTest {
         mockBackend.setupMockResponse("Home screen API response");
         homeScreen.openScreen("Home screen");
         homeScreenRobot.findViewByName(null);
+        homeScreenRobot.findViewByName("Blah");
         homeScreenRobot.verifyViewDisplayed();
 
     }
