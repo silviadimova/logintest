@@ -2,7 +2,10 @@ package bubi.com.logintest.screentests;
 
 public class HomeScreen {
 
+    private String screenName;
+
     public void openScreen(String screenName){
-        System.out.println(screenName+" is opened");
+        this.screenName = screenName;
+        System.out.println(this.screenName+" is opened");
     }
 }

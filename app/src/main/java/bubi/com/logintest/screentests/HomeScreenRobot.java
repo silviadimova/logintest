@@ -2,20 +2,27 @@ package bubi.com.logintest.screentests;
 
 public class HomeScreenRobot {
 
-    public void findViewByName(String viewName){
-        if(viewName!=null){
-            System.out.println(viewName+" found");
+    private String viewName;
 
+    public void findViewByName(String viewName){
+        this.viewName = viewName;
+        if(viewName!=null){
+            printMessage(this.viewName + " found");
         }
         else{
-            System.out.println(" the view is not found");
-
+            printMessage("the view is not found");
         }
     }
 
     public void verifyViewDisplayed() {
-        System.out.println(" The view is displayed");
+        printMessage ("property value is "+ viewName);
+    }
+
+    private void printMessage(String message){
+        System.out.println(message);
     }
 
 }
+
+
 
