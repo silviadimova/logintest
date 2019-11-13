@@ -7,7 +7,7 @@ public class HomeScreenRobot {
     public void findViewByName(String viewName){
         this.viewName = viewName;
         if(viewName!=null){
-            printMessage(this.viewName +" found");
+            printMessage(this.viewName + " found");
         }
         else{
             printMessage("the view is not found");
