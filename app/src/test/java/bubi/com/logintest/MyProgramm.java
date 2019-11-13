@@ -49,8 +49,10 @@ public class MyProgramm {
         printSchoolFoundationYear();
         printSchoolCapacity(school.getCapacity());
 
-    }public void printSchoolCapacity(int capacity){
-        if(capacity<150){
+    }
+
+    public void printSchoolCapacity(int capacity){
+        if(capacity < 150){
             System.out.println("School is undersubscribed");
         }
         else{
