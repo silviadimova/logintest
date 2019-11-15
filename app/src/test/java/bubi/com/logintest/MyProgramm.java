@@ -42,9 +42,7 @@ public class MyProgramm {
 
     private void addNewHeadteacherToSchool(String name,int age, Experience headTeacherExperience){
         Headteacher headteacher;
-        headteacher = new Headteacher();
-        headteacher.setName(name);
-        headteacher.setAge(age);
-        headteacher.setHeadTeacherExperience(headTeacherExperience);
+        headteacher = new Headteacher(name, age, headTeacherExperience);
+
     }
 }
