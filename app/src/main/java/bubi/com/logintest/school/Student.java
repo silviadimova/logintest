@@ -7,6 +7,13 @@ public class Student {
     private MedicalStatus medicalStatus;
     public static String defaultStudentName = "No name";
 
+    public Student(String name, int age, char gender) {
+        setName(name);
+        this.age = age;
+        setGender(gender);
+
+    }
+
     public String getName () {
         return name;
     }

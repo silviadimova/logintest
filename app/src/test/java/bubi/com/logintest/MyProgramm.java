@@ -3,11 +3,11 @@ package bubi.com.logintest;
 import org.junit.Test;
 
 
+import bubi.com.logintest.school.Experience;
 import bubi.com.logintest.school.Headteacher;
 import bubi.com.logintest.school.School;
 import bubi.com.logintest.school.Student;
 import bubi.com.logintest.school.Teacher;
-
 
 public class MyProgramm {
     private School school = new School();
@@ -15,85 +15,34 @@ public class MyProgramm {
     @Test
     public void testSchoolNameSaved(){
 
-        Student student1;
-        student1 = new Student();
-        student1.setName("Kamran");
-        student1.age = 15;
-        student1.setGender('M');
 
-        Student student2;
-        student2 = new Student();
-        student2.setName("Klara");
-        student2.age = 16;
-        student2.setGender('F');
+        addNewTeachersToSchool("Mr.Robin",43, "History", new Experience());
+        addNewTeachersToSchool("Mrs.Coppens",28,"Maths", new Experience());
+        addNewTeachersToSchool("Mr.Chuk",45,"Geography",new Experience());
 
-        Student student3;
-        student3 = new Student();
-        student3.setName("Rony");
-        student3.age = 13;
-        student3.setGender('M');
+        addNewStudentsToSchool("Loik",14,'M');
+        addNewStudentsToSchool("Victor",10,'M');
+        addNewStudentsToSchool("Boris",15,'M');
 
-        school.addStudent(student1);
-        school.addStudent(student2);
-        school.addStudent(student3);
+        addNewHeadteacherToSchool("Mr.Roberts",56,new Experience());
 
+    }
+    private void addNewTeachersToSchool(String name,int age,String subject,Experience teacherExperience){
+        Teacher teacher;
+        teacher = new Teacher(name, age, subject, teacherExperience);
+        school.addTeacher(teacher);
+
+    }
+    private void addNewStudentsToSchool(String name,int age,char gender){
+        Student student;
+        student = new Student(name,age,gender);
+        school.addStudent(student);
+
+    }
+
+    private void addNewHeadteacherToSchool(String name,int age, Experience headTeacherExperience){
         Headteacher headteacher;
-        headteacher = new Headteacher();
-        school.setHeadteacher(headteacher);
-        school.setFoundationYear(1990);
-        school.setCapacity(150);
-
-        addNewStudentIfNotEnough(school.getStudentNumber());
-        addNewTeacherIfZero(school.getTeacherNumber());
-        printHeadteacherNameIfExisting(school.getHeadteacher().getName());
-        printSchoolFoundationYear();
-        printSchoolCapacity(school.getCapacity());
+        headteacher = new Headteacher(name, age, headTeacherExperience);
 
     }
-
-    public void printSchoolCapacity(int capacity){
-        if(capacity < 150){
-            System.out.println("School is undersubscribed");
-        }
-        else{
-            System.out.println("School is oversubscribed");
-        }
-    }
-
-
-
-
-    private void printSchoolFoundationYear() {
-        System.out.println(school.getFoundationYear());
-    }
-
-    public void addNewStudentIfNotEnough(int number){
-        if(number<5){
-            Student student;
-            student = new Student();
-            school.addStudent(student);
-            System.out.println(number);
-        }
-
-    }
-    public void addNewTeacherIfZero(int number){
-        if(number==0){
-            Teacher teacher;
-            teacher = new Teacher();
-            school.addTeacher(teacher);
-            System.out.println(number);
-
-
-        }
-
-    }
-    public void printHeadteacherNameIfExisting(String headteacherName){
-        if(headteacherName != null){
-            System.out.println(headteacherName);
-        }
-        else{
-            school.getHeadteacher().setName("Mr.Roberts");
-        }
-    }
-
 }
