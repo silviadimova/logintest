@@ -23,10 +23,12 @@ public class Student {
     }
 
     public void setMedicalStatus (MedicalStatus newMedStat) {
+
         medicalStatus = newMedStat;
     }
 
     public void setGender (char g){
+
         gender = g;
     }
 

@@ -32,6 +32,7 @@ public class School {
 
     }
     public void addTeacher(Teacher newTeacher){
+
         teacherList.add(newTeacher);
     }
 
@@ -67,5 +68,15 @@ public class School {
 
     public int getFoundationYear() {
         return foundationYear;
+    }
+
+    public Teacher getTeacherByIndex(int index) {
+        return teacherList.get(index);
+    }
+    public void removeTeacherByIndex(int index){
+        teacherList.remove(index);
+    }
+    public boolean checkIfListContainsTeacher(Teacher teacher){
+        return teacherList.contains(teacher);
     }
 }
