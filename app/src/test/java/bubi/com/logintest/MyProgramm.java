@@ -15,10 +15,21 @@ public class MyProgramm {
     @Test
     public void testSchoolNameSaved(){
 
+//        addNewTeachersToSchool("Mr.Robin",43, "History", new Experience());
+//        addNewTeachersToSchool("Mrs.Coppens",28,"Maths", new Experience());
+//        addNewTeachersToSchool("Mr.Chuk",45,"Geography",new Experience());
 
-        addNewTeachersToSchool("Mr.Robin",43, "History", new Experience());
-        addNewTeachersToSchool("Mrs.Coppens",28,"Maths", new Experience());
-        addNewTeachersToSchool("Mr.Chuk",45,"Geography",new Experience());
+        for (int counter = 0; counter < 10; counter++) {
+            addNewTeachersToSchool("Mr.Robin",43, "History", new Experience());
+            addNewTeachersToSchool("Mrs.Coppens",28,"Maths", new Experience());
+            addNewTeachersToSchool("Mr.Chuk",45,"Geography",new Experience());
+            System.out.println(school.getTeacherNumber());
+        }
+
+
+        for (int counter = 0; counter < school.getTeacherNumber(); counter++) {
+            System.out.println(counter + ". " + school.getTeacherByIndex(counter).getName() + ", age = " + school.getTeacherByIndex(counter).getAge());
+        }
 
         addNewStudentsToSchool("Loik",14,'M');
         addNewStudentsToSchool("Victor",10,'M');
