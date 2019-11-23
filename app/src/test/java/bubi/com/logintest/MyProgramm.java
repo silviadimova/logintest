@@ -31,9 +31,9 @@ public class MyProgramm {
             System.out.println(counter + ". " + school.getTeacherByIndex(counter).getName() + ", age = " + school.getTeacherByIndex(counter).getAge());
         }
 
-        addNewStudentsToSchool("Loik",14,'M');
-        addNewStudentsToSchool("Victor",10,'M');
-        addNewStudentsToSchool("Boris",15,'M');
+        addNewStudentsToSchool("Loik",14,'M', Student.SkinColour.SKIN_COLOUR_WHITE);
+        addNewStudentsToSchool("Victor",10,'M', Student.SkinColour.SKIN_COLOUR_BLACK );
+        addNewStudentsToSchool("Boris",15,'M', Student.SkinColour.SKIN_COLOUR_YELLOW);
 
         addNewHeadteacherToSchool("Mr.Roberts",56,new Experience());
 
@@ -44,16 +44,16 @@ public class MyProgramm {
         school.addTeacher(teacher);
 
     }
-    private void addNewStudentsToSchool(String name,int age,char gender){
+    private void addNewStudentsToSchool(String name, int age, char gender, Student.SkinColour skinColour){
         Student student;
-        student = new Student(name,age,gender);
+        student = new Student(name,age,gender,skinColour);
         school.addStudent(student);
-
+        System.out.println("Student name = " + name + ", student skin colour = " + skinColour);
     }
 
     private void addNewHeadteacherToSchool(String name,int age, Experience headTeacherExperience){
         Headteacher headteacher;
         headteacher = new Headteacher(name, age, headTeacherExperience);
-
+        school.setHeadteacher(headteacher);
     }
 }
