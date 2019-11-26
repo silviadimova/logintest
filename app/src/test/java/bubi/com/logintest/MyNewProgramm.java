@@ -62,10 +62,15 @@ public class MyNewProgramm {
             case 4:
             case 6:
             case 8:
-            case 10: System.out.println("The number is not two digit"); break;
+            case 10:
+                System.out.println("The number is not two digit");
+                break;
             case 5:
-            case 7: System.out.println("The number is one digit"); break;
-            default: System.out.println("Have no idea what number is it");
+            case 7:
+                System.out.println("The number is one digit");
+                break;
+            default:
+                System.out.println("Have no idea what number is it");
         }
 
 
