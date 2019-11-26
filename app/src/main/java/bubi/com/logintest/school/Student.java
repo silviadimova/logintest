@@ -6,12 +6,24 @@ public class Student {
     private char gender;
     private MedicalStatus medicalStatus;
     public static String defaultStudentName = "No name";
+    private SkinColour skinColour;
 
-    public Student(String name, int age, char gender) {
+    public enum SkinColour{
+        SKIN_COLOUR_WHITE,
+        SKIN_COLOUR_BLACK,
+        SKIN_COLOUR_YELLOW;
+    }
+
+    public Student(String name, int age, char gender, SkinColour skinColour) {
         setName(name);
         this.age = age;
         setGender(gender);
+        setSkinColour(skinColour);
 
+    }
+
+    private void setSkinColour(SkinColour skinColour) {
+        this.skinColour = skinColour;
     }
 
     public String getName () {
