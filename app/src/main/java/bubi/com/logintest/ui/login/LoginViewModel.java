@@ -1,10 +1,10 @@
 package bubi.com.logintest.ui.login;
 
-import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.ViewModel;
 import android.util.Patterns;
 
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 import bubi.com.logintest.data.LoginRepository;
 import bubi.com.logintest.data.Result;
 import bubi.com.logintest.data.model.LoggedInUser;
@@ -58,7 +58,7 @@ public class LoginViewModel extends ViewModel {
         if (username.contains("@")) {
             return Patterns.EMAIL_ADDRESS.matcher(username).matches();
         } else {
-            return !username.trim().isEmpty();
+            return false;
         }
     }
 

@@ -86,9 +86,29 @@ public class MyNewProgramm {
             System.out.println("Zero");
         }
 
-
     }
 
+    @Test
+    public void runMyCode() {
+        long result = calcSum(1,2,3,4);
+        System.out.println(result);
+        main2();
+    }
 
+    public long calcSum(int... elements){
+        long sum = 0;
+        for(int element : elements){
+            sum+=element;
+        }
+        return sum;
+    }
+
+    public void main2 (){
+        long sum = calcSum(2, 5);
+        System.out.println(sum);
+
+        long sum2 = calcSum(4, 0, -2, 12);
+        System.out.println(sum2);
+
+    }
 }
-
