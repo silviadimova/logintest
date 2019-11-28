@@ -1,9 +1,9 @@
 package bubi.com.logintest.ui.login;
 
-import android.arch.lifecycle.ViewModel;
-import android.arch.lifecycle.ViewModelProvider;
-import android.support.annotation.NonNull;
 
+import androidx.annotation.NonNull;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 import bubi.com.logintest.data.LoginDataSource;
 import bubi.com.logintest.data.LoginRepository;
 

@@ -11,4 +11,8 @@
     <string name="login_failed">"Login failed"</string>
     <string name="welcome_screen">Welcome Screen</string>
     <string name="welcome_label">Welcome user</string>
+    <string name="backup">backup</string>
+    <string name="block">block</string>
+    <string name="title_pattern">Product %1\$s</string>
+    <string name="description_pattern">Product Description %1$s</string>
 </resources>
