@@ -4,6 +4,8 @@ package bubi.com.logintest.ui.welcome;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -14,6 +16,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import bubi.com.logintest.R;
 import bubi.com.logintest.ui.list.ListActivity;
+import bubi.com.logintest.ui.pushes.PushNotificationsActivity;
+import bubi.com.logintest.ui.web.WebViewActivity;
 
 
 public class WelcomeActivity extends AppCompatActivity {
@@ -42,12 +46,18 @@ public class WelcomeActivity extends AppCompatActivity {
         String subject = "Push subject";
         String body = "Push notification text continue";
 
+        Intent resultIntent = new Intent(this, PushNotificationsActivity.class);
+        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+        stackBuilder.addNextIntentWithParentStack(resultIntent);
+        PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+
         NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         Notification.Builder notificationBuilder = new Notification.Builder(getApplicationContext())
                 .setContentTitle(tittle)
                 .setContentText(body)
                 .setContentTitle(subject)
-                .setSmallIcon(R.drawable.ic_launcher_background);
+                .setSmallIcon(R.drawable.ic_push_notification_24dp)
+                .setContentIntent(resultPendingIntent);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = new NotificationChannel("some_channel_id", "Pusher Events", NotificationManager.IMPORTANCE_DEFAULT);
@@ -62,6 +72,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void openWebViewScreen() {
-        //needs implementation
+        Intent webViewIntent = new Intent(this, WebViewActivity.class);
+        startActivity(webViewIntent);
     }
 }
