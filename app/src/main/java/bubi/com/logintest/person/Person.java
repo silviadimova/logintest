@@ -59,5 +59,9 @@ public class Person {
         PersonName silvia = new PersonName();
         boolean isHomeNumberSameAsStreeName = homeNumber == streetName;
     }
+
+    public PersonName getName() {
+        return name;
+    }
 }
 

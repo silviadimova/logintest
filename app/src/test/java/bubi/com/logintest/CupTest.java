@@ -25,9 +25,9 @@ public class CupTest {
 
     @Test
     public void shouldApplyNewType() {
-        String beer = "tea";
-        tested.setType(beer);
+        String expected = "tea";
+        tested.setType(expected);
         String result = tested.getType();
-        assertEquals(beer, result);
+        assertEquals(expected, result);
     }
 }

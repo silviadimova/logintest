@@ -18,7 +18,7 @@ public class Cup {
     }
 
     public void setType(String newType) {
-        type = newType + "-";
+        type = newType;
     }
 
     public String getType() {

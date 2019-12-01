@@ -15,4 +15,7 @@
     <string name="block">block</string>
     <string name="title_pattern">Product %1\$s</string>
     <string name="description_pattern">Product Description %1$s</string>
+    <string name="open_list_screen">Please open list screen</string>
+    <string name="show_push_notification">Please show push notification</string>
+    <string name="open_web_view_screen">Please open web view screen</string>
 </resources>
