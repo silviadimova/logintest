@@ -10,7 +10,10 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="welcome_screen">Welcome Screen</string>
+    <string name="pushes_screen">Push notifications Screen</string>
+    <string name="web_view_screen">Our web view Screen</string>
     <string name="welcome_label">Welcome user</string>
+    <string name="hello_push_notification">Hello pushes</string>
     <string name="backup">backup</string>
     <string name="block">block</string>
     <string name="title_pattern">Product %1\$s</string>
