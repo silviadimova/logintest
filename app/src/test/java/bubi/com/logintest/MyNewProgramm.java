@@ -9,10 +9,8 @@ public class MyNewProgramm {
 
     private NewCalculator calculator = new NewCalculator();
 
-
     @Test
     public void testCalculations(){
-
 
         System.out.println(calculator.operateTwoNumbers(3,4, CalculatorOperation.ADD_OPERATION));
         System.out.println(calculator.operateTwoNumbers(5,6, CalculatorOperation.MULTIPLY_OPERATION));
